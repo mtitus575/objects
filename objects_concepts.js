@@ -142,4 +142,41 @@ Methods
 
 _____________________________________________________________________________________
 
+Nested Objects:
+
+1. Nested objects means that one object has another object as it's key-value (property) pair.
+    - You can have an object, in an object, that is in an object and has an array as it's final property.
+
+Note:
+    - The syntax for objects inside objects looks as folows:
+        
+        Example:
+            let mainObjectName = {
+                primaryObject1: {
+                    key: 'value',
+                    key: 'value',
+                    method: function () {method code block}
+                },
+
+                primaryObject2: {
+                    key: 'value',
+                    key: 'value',
+                    method: function () {method code block},
+                    'Secondary Object': {
+                        key: 'Value we want to access',
+                        Array: []
+                    }
+                },
+
+                primaryObject3: {
+
+                }
+            };
+
+2. Accessing nested objects:
+    - Nested objects can be accessed by chaining the nested properted using the dot and bracket notations.
+    - This is done as follows:
+
+        Example:
+            mainObjectName.primaryObject2['Secondary Object'].key //Prints 'Value we want to access'
 */
