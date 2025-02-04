@@ -179,4 +179,11 @@ Note:
 
         Example:
             mainObjectName.primaryObject2['Secondary Object'].key //Prints 'Value we want to access'
+
+__________________________________________________________________________________
+
+Pass BY Reference:
+
+Objects are passed by reference:
+    - Meaning, 
 */
