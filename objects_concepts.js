@@ -102,5 +102,44 @@ Deleting Properties:
                 
             delete spaceship.mission;  // Removes the mission property.
 
+______________________________________________________________________________________________________
+
+Methods
+
+1. When the data stored on an object is a FUNCTION, it is called a Method.
+    - A property is what an object has.
+    - A method is what an object does.
+
+2. To add a method to the object literal:
+    - You still use the key-value pair syntax.
+        - They key will now be the method name.
+        - The value is an anonymous function expression.
+
+            Example:
+                const alienShip = {
+                    invade: function () { 
+                        console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+                    }
+                };
+        
+        - The function keyword and the colon can be ommited.
+        - This change was implemented since ES6.
+        - The method will now look like this:
+             
+            Example:
+                const alienShip = {
+                invade () { 
+                    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+                }
+            };
+
+3. Invoking/calling object methods:
+    - You use the object name and appending it with the dot notation, followed by the function.
+        - The function is the method name and the paranthesis.
+
+            Example:
+                alienShip.invade() // Prints the message above.
+
+_____________________________________________________________________________________
 
 */
