@@ -7,42 +7,100 @@ Intro:
     - The curly braces, {}, is used to define an Object Literal (the code block of an object)
     - It holds UNORDERED data.
     - The data is stored in key-value pairs. 
+        -- Key-value pairs are called PROPERTIES.
 
 2. Object structure/syntax.
     - The variable keyword (let, const, var) is used to link the object name with the object literal.
-    - followed by the object name and the = operator.
-    - followed by curly braces, {}
-    - Inside the curly braces, you add you properties.
-        - Properties are the combination of the key-value pair.
-    - Between the key and the value, you must place a colon, : .
-    - The properties are divided a comma ( , ).
+    - Followed by the object NAME and the = operator.
+    - followed by curly braces, {} , and a semi-colon (;).
+        - Inside the curly braces, you add you properties.
+            - Properties are the combination of the key-value pairs.
+        - Between the key and the value, you must place a colon, (:) .
+        - The properties are divided a comma ( , ).
 
+    -Example:       let spaceShip = {
+                        color: 'Gray',
+                        'Fuel Type': 'Jet Fuel'
+                    };
 
 3. Keys explained.
     - A key is similar to a variable name that points to a location in memory where the value is held.
-    - Key are STRINGS by default (the system stores it as a string in the background)
+    - Keys are STRINGS by default (the system stores it as a string in the background)
         -You don't need to use the quotation marks for single worded keys.
-        -When defining a key with a space, you MUST use quotes.
+            -You can use camelcase to make multiple words into one.
+        -When defining a key with a space or special character, you MUST use quotes. (examples above)
 
 4. Values explained.
     - Values can be any data type.
+    - Values that are strings must use the quotation marks to remain strings.
 
--------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+
 1. Accessing the Properties:
-    a. There are 2 methods to access the properties. These are the dot notation (.), and the square bracket method.
+
+    a. There are 2 methods to access the properties. These are the dot notation (.), and the square bracket method ([]).
         i. dot notation:
-            - You write the object's name, followed by the dot operator and then the propery name (the key).
-            - This will then return the value of that key.
+            - You write the object's NAME, followed by the DOT operator and then the property name (the KEY).
+                - This will then return the value of that key.
             - NOTE: If you try to access a property that does not exist, undefined is returned.
-            -Examples:
-                let spaceship = {
-                    homePlanet: 'Earth',
-                    color: 'silver'
-                };
-                spaceship.homePlanet; // Returns 'Earth',
-                spaceship.color; // Returns 'silver',
+
+                Examples:
+                    let spaceship = {
+                        homePlanet: 'Earth',
+                        color: 'silver'
+                    };
+                    spaceship.homePlanet; // Returns 'Earth',
+                    spaceship.color; // Returns 'silver',
+
         ii. Bracket notation:
-            - The bracket notation is used when the key is a string with a space or special character.
-            - 
+            - The bracket notation is used when the KEY is a STRING with a space, number or special character.
+            - The key is placed inside the bracket.
+
+                Example:
+                    let spaceship = {
+                        homePlanet: 'Earth',
+                        color: 'silver'
+                        "Fuel Type": 'Jet Fuel'
+                    };
+                    spaceship["Fuel Type"] // Returns 'Jet Fuel'
+______________________________________________________________________________________________________                
+ 
+Property Assignment:
+
+1. All objects are mutable.
+    - This means they can be updated after being created.
+    - The dot or bracket notation is used to update objects.
+    - The assignment operator, = , is used to add new properties or to update existing ones.
+
+        Examples:
+            spaceship.color = 'brown' // Updates the color of the above object-property.
+            spaceship["Fuel Type"] = 'Vegetable oil' // Updates as above, using the bracket notation.
+            spaceship.crew = 5 // Adds a new property with a key called crew and the value of 5.
+
+    - One of 2 things can happenw with property assignment:
+        a. If the property exists already, the value is replaced with the new value.
+        b. If the property does not exist, a new one is added to the object.
+
+    Note:
+        - Objects declared with the const keyword CANNOT be reassigned.
+        - Their PROPERTIES are still mutable!
+            Meaning, you can still change, add and remove properties.
+    
+___________________________________________________________________________________________________
+
+Deleting Properties:
+
+1. The delete operator is used to remove properties.
+    - To use this, you add the delete before the object-key combination.
+
+        Example:
+            const spaceship = {
+                'Fuel Type': 'Turbo Fuel',
+                homePlanet: 'Earth',
+                mission: 'Explore the universe' 
+            };
+                
+            delete spaceship.mission;  // Removes the mission property.
+
 
 */
